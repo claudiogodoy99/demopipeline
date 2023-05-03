@@ -1,0 +1,22 @@
+name: AKS Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Configure kubectl
+      run: |
+        az aks get-credentials --resource-group b3-tests --name b3-testing
+
+        kubectl config use-context b3-testing
+    - name: Deploy application
+      run: |
+        kubectl apply -f deployment.yml

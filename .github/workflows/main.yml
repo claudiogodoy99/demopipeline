@@ -19,4 +19,4 @@ jobs:
         kubectl config use-context b3-testing
     - name: Deploy application
       run: |
-        kubectl apply -f deployment.yml
+        kubectl apply -f ./deployment.yml

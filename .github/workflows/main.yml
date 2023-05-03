@@ -17,9 +17,11 @@ jobs:
         az aks get-credentials --resource-group b3-tests --name b3-testing
 
         kubectl config use-context b3-testing
-    - name: Download Deployment
-      run: |
-        curl -o deployment.yml https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment.yml
     - name: Deploy application
       run: |
-        kubectl apply -f ./deployment.yml
+        urls=("https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment-a.yml" "https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment-b.yml")
+        for url in "${urls[@]}"; do
+           kubectl apply -f $url
+        done
+
+       

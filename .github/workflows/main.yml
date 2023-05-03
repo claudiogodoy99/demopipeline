@@ -19,7 +19,7 @@ jobs:
         kubectl config use-context b3-testing
     - name: Download Deployment
       run: |
-        curl -o deployment.yml https://github.com/claudiogodoy99/demopipeline/blob/main/deployment.yml
+        curl -o deployment.yml https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment.yml
     - name: Deploy application
       run: |
         kubectl apply -f ./deployment.yml

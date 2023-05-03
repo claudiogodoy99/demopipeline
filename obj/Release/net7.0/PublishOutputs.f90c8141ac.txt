@@ -1,0 +1,7 @@
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\demo-pipeline.exe
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\appsettings.Development.json
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\appsettings.json
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\demo-pipeline.dll
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\demo-pipeline.deps.json
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\demo-pipeline.runtimeconfig.json
+C:\Users\claudiogodoy\OneDrive - Microsoft\Desktop\repos\B3\demo-pipeline\obj\Docker\publish\demo-pipeline.pdb

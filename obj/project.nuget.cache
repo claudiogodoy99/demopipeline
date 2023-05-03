@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LUI+gVeaZLLCuSvhCnNcvutJ8UdIBVzZDMoHF5pg/SZNUMaGMtcuGbSbWRgSyvQ6Zk4UFYIuCvZITYtoUVeFMg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\claudiogodoy\\OneDrive - Microsoft\\Desktop\\repos\\B3\\demo-pipeline\\demo-pipeline.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\claudiogodoy\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
+  "logs": []
+}

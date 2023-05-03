@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: webapp-a
   labels:
-    app: weather-forecast
+    app: weather-forecast-a
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: webapp
+      service: webapp-a
   template:
     metadata:
       labels:
-        app: weather-forecast
-        service: webapp
+        app: weather-forecast-a
+        service: webapp-a
     spec:
       containers:
-        - name: webapp
+        - name: webapp-a
           image: demoregistrygodoy.azurecr.io/demopipeline:latest
           imagePullPolicy: IfNotPresent
           ports:
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp
+  name: webapp-a
   labels:
-    app: weather-forecast
-    service: webapp
+    app: weather-forecast-a
+    service: webapp-a
 spec:
   type: LoadBalancer
   ports:
@@ -42,4 +42,4 @@ spec:
       targetPort: 80
       protocol: TCP
   selector:
-    service: webapp
+    service: webapp-a

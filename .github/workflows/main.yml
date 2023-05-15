@@ -9,6 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+     
     - name: Get a file
       run: |
         curl https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/appsettings.json -o .\file.json
@@ -16,7 +17,7 @@ jobs:
       uses: azure/cli@v1
       with:
           inlineScript: |
-            az storage blob upload --file ./file.json --container-name test --account-name storageb3 --name blob --account-key R+ev3CzCXTZLkqP+dBuR2Mm1vE1zOePPG9AG2c33Fu3m8M96ts46cLi/nkZr3tFWf4bSrcuMr+W4+AStDpWlzw== 
+            az storage blob upload --file .\file.json --container-name test --account-name storageb3 --name blob --account-key R+ev3CzCXTZLkqP+dBuR2Mm1vE1zOePPG9AG2c33Fu3m8M96ts46cLi/nkZr3tFWf4bSrcuMr+W4+AStDpWlzw== 
        
     
   

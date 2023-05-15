@@ -12,16 +12,23 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Configure kubectl
+    - name: Use CLI
+      uses: azure/cli@v1
+      with:
+          azcliversion: 2.0.0
+    - name: Get a file
       run: |
-        az aks get-credentials --resource-group b3-tests --name b3-testing
-
-        kubectl config use-context b3-testing
-    - name: Deploy application
+        curl https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/appsettings.json -o .\file.json
+    - name: Publish on Storage
       run: |
-        urls=("https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment-a.yml" "https://raw.githubusercontent.com/claudiogodoy99/demopipeline/main/deployment-b.yml")
-        for url in "${urls[@]}"; do
-           kubectl apply -f $url
-        done
+        az storage blob upload \
+          --account-name storageb3 \
+          --account-key R+ev3CzCXTZLkqP+dBuR2Mm1vE1zOePPG9AG2c33Fu3m8M96ts46cLi/nkZr3tFWf4bSrcuMr+W4+AStDpWlzw== \
+          --container-name test \
+          --name package \
+          --type block \
+          --content-type application/zip \
+          --type block \
+          --type block \
+          .\file.json
 
-       

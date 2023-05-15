@@ -16,15 +16,7 @@ jobs:
       uses: azure/cli@v1
       with:
           inlineScript: |
-            az storage blob upload \
-              --account-name storageb3 \
-              --account-key R+ev3CzCXTZLkqP+dBuR2Mm1vE1zOePPG9AG2c33Fu3m8M96ts46cLi/nkZr3tFWf4bSrcuMr+W4+AStDpWlzw== \
-              --container-name test \
-              --name package \
-              --type block \
-              --content-type application/zip \
-              --type block \
-              --type block \
-              .\file.json
+            az storage blob upload --file file.json --container-name MyContainer --name storageb3 --account-key R+ev3CzCXTZLkqP+dBuR2Mm1vE1zOePPG9AG2c33Fu3m8M96ts46cLi/nkZr3tFWf4bSrcuMr+W4+AStDpWlzw== 
+       
     
   
